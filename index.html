@@ -1,38 +1,15 @@
-<pre><code>
-# 2023-04-13
+# 2023-05-08
 
 ## What I am working on now
 
-### Finger
+### libsa
 
-A blog of sorts to keep track of what I have been working on. It uses GitHub actions to deploy to GitHub Pages on push. The intention being that the history of posts can be found in the git history, but only the latest is post is available at [https://emil.kloeden.github.io/finger/](https://emil.kloeden.github.io/finger/)
+This package provides python bindings to query and access Libraries SA including searching by title, author and ISBN, as well as placing holds and changing credentials.
 
-### A command line util to interact with Libraries SA
+It's practically done.
 
-Small progress to date on this one, the goal is to allow the user to view their current checkouts, search for books and place and remove holds.
+### qqg and qqg-rs
 
-### A means to integrate `md-browse` (see Recent Accomplishments) into NeoVim
+QQG or "quack quack go" is a simple command line utility that queries DuckDuckGo's HTML search application. By default it returns results in Markdown format but passing a flag returns it in JSON.
 
-The goal here is to replace the current buffer with the content of a website (but in the more easily-read) markdown syntax. Placing the cursor over a link and then executing another command _should_ the replace the buffer again. In this way vim would act as a very basic web browser.
-
-## Recent accomplishments
-
-### qqg
-
-QQG or "quack quack go" is a simple command line utility that glues together `requests` and `beautifulsoup` to query DuckDuckGo's HTML search application. By default it returns results in Markdown format but passing a flag returns it in JSON.
-
-### md-browse
-
-`md-browse` takes a URL or HTML fed through stdin, strips out unwanted tags and attributes and outputs markdown. Glues together `requests`, `beautifulsoup` and `markdownify` python libraries.
-
-### I created and implemented a process to transfer files from on-premise resource to the cloud
-
-Using:
-
-- PowerShell and the `Az` module
-- Azure Resources (Storage Account, Containers)
-- Windows Scheduled Tasks
-- Python and pytest (after taking a diversion through python land)
-
-I ultimately returned to PowerShell so as to not introduce another application on a legacy device. The `Python` and `pytest` diversion was worthwhile as it helped provide the facility to compare JSON output from both solutions.
-</code></pre>
+With help from ChatGPT, I translated this from [python](https://github.com.emilkloeden/qqg) into [rust](https://github.com.emilkloeden/qqg-rs) and manually deployed linux and windows binaries.
